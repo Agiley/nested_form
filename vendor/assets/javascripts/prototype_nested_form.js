@@ -39,7 +39,7 @@ document.on('click', 'a.add_nested_fields', function(event, element) {
 document.on('click', 'a.remove_nested_fields', function(event, element) {
   var hidden_field = element.previous(0);
   if(hidden_field) hidden_field.value = '1';
-  element.ancestors()[0].hide();
+  element.up('div.fields').hide();
 
   return false;
 }.bind(this));
